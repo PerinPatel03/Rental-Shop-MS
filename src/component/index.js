@@ -35,5 +35,5 @@ export {
     ActiveBookingsTable,
     RecentPaymentsTable,
     PaymentFilters,
-    PaymentTable
+    PaymentTable,
 }
