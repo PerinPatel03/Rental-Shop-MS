@@ -27,7 +27,7 @@ function EditProduct() {
     }, [id, navigate]);
 
   return product ? (
-    <div className='py-8'>
+    <div>
         <ProductForm product={product} />
     </div>
   ) : null

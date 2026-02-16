@@ -27,7 +27,7 @@ function EditBooking() {
   }, [id, navigate]);
 
   return booking ? (
-    <div className='py-8'>
+    <div>
       <BookingForm booking={booking} />
     </div>
   ) : null
