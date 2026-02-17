@@ -167,7 +167,7 @@ function Dashboard() {
 
   if (isLoading) {
     return (
-      <div className="min-h-auto bg-gray-50">
+      <div className="min-h-full bg-gray-50">
         <div className="max-w-7xl mx-auto p-6">
           <LoadingSkeleton />
         </div>
@@ -176,7 +176,7 @@ function Dashboard() {
   }
 
   return (
-    <div className="min-h-auto bg-gray-50">
+    <div className="min-h-full bg-gray-50">
       <div className="max-w-7xl mx-auto p-6 space-y-8">
         {/* Welcome Section */}
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl">

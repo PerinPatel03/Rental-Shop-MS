@@ -77,7 +77,7 @@ export default function Product() {
 
   // Loading Skeleton
   const LoadingSkeleton = () => (
-    <div className="min-h-auto bg-gray-50">
+    <div className="min-h-full bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="animate-pulse">
           {/* Header */}
@@ -120,7 +120,7 @@ export default function Product() {
 
   if (!product) {
     return (
-      <div className="min-h-auto bg-gray-50 flex items-center justify-center">
+      <div className="min-h-full bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <Package className="w-16 h-16 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Product Not Found</h2>
