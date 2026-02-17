@@ -550,7 +550,7 @@ function BookingForm({ booking = null }) {
               </div>
 
               {/* Financial Details */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-6">
                 <div className="px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-orange-50 to-orange-100">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-orange-500 rounded-lg">
