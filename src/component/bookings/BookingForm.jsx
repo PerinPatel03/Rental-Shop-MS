@@ -147,7 +147,7 @@ function BookingForm({ booking = null }) {
 
     const start = new Date(form.startDate);
     const end = new Date(form.endDate);
-    const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+    const days = Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1;
 
     if (days <= 0) return null;
 
