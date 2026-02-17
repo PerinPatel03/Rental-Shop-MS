@@ -80,16 +80,39 @@ function BookingForm({ booking = null }) {
 
   const loadCurrentData = async () => {
     try {
+      setLoading(true);
+      
+      // Fetch product and customer data in parallel
+      const promises = [];
+      
       if (booking?.productId) {
-        // In a real app, you'd fetch the specific product details
-        setSelectedProduct({ id: booking.productId, name: `Product #${booking.productId}` });
+        promises.push(productService.getProductById(booking.productId));
+      } else {
+        promises.push(Promise.resolve(null));
       }
+      
       if (booking?.customerId) {
-        // In a real app, you'd fetch the specific customer details
-        setSelectedCustomer({ id: booking.customerId, name: `Customer #${booking.customerId}` });
+        promises.push(customerService.getCustomerById(booking.customerId));
+      } else {
+        promises.push(Promise.resolve(null));
       }
+      
+      const [productData, customerData] = await Promise.all(promises);
+      
+      if (productData) {
+        setSelectedProduct(productData);
+      }
+      
+      if (customerData) {
+        setSelectedCustomer(customerData);
+      }
+      
+      // Also fetch the full lists for dropdowns (in case user needs to see them)
+      await fetchData();
     } catch (error) {
       console.error("Failed to load current data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
