@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router'
 import {
   DollarSign,
   Shield,
@@ -23,6 +24,7 @@ import dashboardService from '../../api/dashboardService';
 import { ActiveBookingsTable, RecentPaymentsTable } from '../../component/index'
 
 function Dashboard() {
+  const navigate = useNavigate();
   const [summary, setSummary] = useState(null);
   const [recentPayments, setRecentPayments] = useState([]);
   const [activeBookings, setActiveBookings] = useState([]);
@@ -297,7 +299,10 @@ function Dashboard() {
                     <CreditCard className="w-5 h-5 mr-2 text-green-600" />
                     Recent Payments
                   </h3>
-                  <button className="text-sm text-orange-600 hover:text-orange-700 font-medium">
+                  <button
+                    onClick={() => navigate('/payments')}
+                    className="text-sm text-orange-600 hover:text-orange-700 font-medium"
+                  >
                     View All
                   </button>
                 </div>
@@ -315,7 +320,10 @@ function Dashboard() {
                     <Package className="w-5 h-5 mr-2 text-blue-600" />
                     Active Rentals
                   </h3>
-                  <button className="text-sm text-orange-600 hover:text-orange-700 font-medium">
+                  <button
+                    onClick={() => navigate('/bookings')}
+                    className="text-sm text-orange-600 hover:text-orange-700 font-medium"
+                  >
                     View All
                   </button>
                 </div>

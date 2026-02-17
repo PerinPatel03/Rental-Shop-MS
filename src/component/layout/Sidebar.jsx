@@ -102,7 +102,7 @@ export default function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 p-4 space-y-2">
+      <nav className="flex-1 p-4 py-6 space-y-2">
         {/* Dashboard */}
         <NavItem to="/" icon={LayoutDashboard}>
           Dashboard
