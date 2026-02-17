@@ -2,7 +2,7 @@ import React from 'react'
 import {
   CreditCard,
   Calendar,
-  DollarSign,
+  IndianRupee,
   Receipt,
   ArrowUpRight,
   ArrowDownRight
@@ -127,9 +127,9 @@ function RecentPaymentsTable({ payments }) {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center space-x-2">
-                        <DollarSign className="w-4 h-4 text-gray-400" />
+                        <IndianRupee className="w-4 h-4 text-gray-400" />
                         <span className="text-sm font-semibold text-gray-900">
-                          ₹{parseFloat(payment.amount || 0).toLocaleString()}
+                          {parseFloat(payment.amount || 0).toLocaleString()}
                         </span>
                       </div>
                     </td>

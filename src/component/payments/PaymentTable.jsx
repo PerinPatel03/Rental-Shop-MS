@@ -4,13 +4,13 @@ import {
   Calendar,
   TrendingUp,
   TrendingDown,
-  DollarSign,
   Receipt,
   ArrowUpRight,
   ArrowDownRight,
   CheckCircle,
   Eye,
-  MoreVertical
+  MoreVertical,
+  IndianRupee
 } from 'lucide-react'
 
 function PaymentTable({ payments }) {
@@ -220,9 +220,9 @@ function PaymentTable({ payments }) {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center space-x-2">
-                        <DollarSign className="w-4 h-4 text-gray-400" />
+                        <IndianRupee className="w-4 h-4 text-gray-400" />
                         <span className="text-sm font-semibold text-gray-900">
-                          ₹{parseFloat(payment.amount || 0).toLocaleString()}
+                          {parseFloat(payment.amount || 0).toLocaleString()}
                         </span>
                       </div>
                     </td>
