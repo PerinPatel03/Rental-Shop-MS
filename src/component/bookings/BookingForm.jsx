@@ -181,8 +181,8 @@ function BookingForm({ booking = null }) {
     if (form.startDate && form.endDate) {
       const start = new Date(form.startDate);
       const end = new Date(form.endDate);
-      if (end <= start) {
-        errors.endDate = "End date must be after start date";
+      if (end < start) {
+        errors.endDate = "End date can't be before start date";
       }
     }
 
