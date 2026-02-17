@@ -279,7 +279,7 @@ function Dashboard() {
               icon={BarChart3}
               title="View Reports"
               description="Analytics & insights"
-              onClick={() => window.location.href = '/analytics'}
+              // onClick={() => window.location.href = '/analytics'}
               color="text-orange-600"
               bgColor="bg-orange-50 hover:bg-orange-100"
             />
