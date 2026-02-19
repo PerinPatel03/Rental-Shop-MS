@@ -85,7 +85,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white shadow-2xl border-r border-gray-700 flex flex-col min-h-auto">
+    <aside className="w-64 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white shadow-2xl border-r border-gray-700 flex flex-col h-screen">
       {/* Brand Section */}
       <div className="p-3.5 border-b border-gray-700">
         <div className="flex items-center gap-3 mb-2">
@@ -101,8 +101,8 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-1 p-4 py-6 space-y-2">
+      {/* Navigation (scrollable middle section) */}
+      <nav className="flex-1 min-h-0 overflow-y-auto p-4 py-6 space-y-2">
         {/* Dashboard */}
         <NavItem to="/" icon={LayoutDashboard}>
           Dashboard
